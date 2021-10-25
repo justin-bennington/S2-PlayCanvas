@@ -6,6 +6,8 @@ var Geolocate = pc.createScript('geolocate');
 Geolocate.attributes.add('refreshRate', {type: 'number', default: 1000}); // Time in milliseconds that the script checks for geolocation
 Geolocate.attributes.add('consoleSigFigs', {type: 'number', default: 4}); // decimal places of the console logged lat/long pairs
 Geolocate.attributes.add('exposeGeoGlobally', {type: 'boolean', default: true}); // Determines whether or not the lat/long pairs are exposed globally for use in other scripts
+Geolocate.attributes.add('longitude', {type: 'number'}); // Global longitude value, only updates if exposeGeoGlobally is checked
+Geolocate.attributes.add('latitude', {type: 'number'}); // Global latitude value, only updates if exposeGeoGlobally is checked
 // initialize code called once per entity
 Geolocate.prototype.initialize = function() {
     var self = this;
