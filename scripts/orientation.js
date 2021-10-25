@@ -50,7 +50,6 @@ Orientation.prototype.update = function (dt) {
     }
 };
 
-
 function handleOrientation() {
     Orientation.orientationEnabled = true;
     window.addEventListener('deviceorientation', function (event) {
